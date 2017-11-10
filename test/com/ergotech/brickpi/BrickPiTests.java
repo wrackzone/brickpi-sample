@@ -70,9 +70,13 @@ public class BrickPiTests {
             try {
                 // get the updated values.
                 Thread.sleep(200); // wait for the values to be read....
+                brickPi.updateValues();
             } catch (InterruptedException ex) {
                 Logger.getLogger(BrickPiTests.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            } catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             // here're the values
             System.out.println("Sensors: " + brickPi.getSensor(SensorPort.S2).getValue()) ;
         }
