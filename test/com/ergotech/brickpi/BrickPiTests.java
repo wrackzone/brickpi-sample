@@ -51,10 +51,10 @@ public class BrickPiTests {
         }
         System.out.println("opening sensors...");
         // add touch sensors to all the ports.        
-        brickPi.setSensor(new Sensor(SensorType.Ultrasonic), SensorPort.S1);
-        brickPi.setSensor(new TouchSensor(), SensorPort.S2);
-        brickPi.setSensor(new Sensor(SensorType.Raw), SensorPort.S3);
-        brickPi.setSensor(new Sensor(SensorType.Raw), SensorPort.S4);
+//        brickPi.setSensor(new Sensor(SensorType.Ultrasonic), SensorPort.S1);
+        brickPi.setSensor(new TouchSensor(), SensorPort.S1);
+//        brickPi.setSensor(new Sensor(SensorType.Raw), SensorPort.S3);
+//        brickPi.setSensor(new Sensor(SensorType.Raw), SensorPort.S4);
         
         try {
         		System.out.println("setting up sensors...");
@@ -73,16 +73,16 @@ public class BrickPiTests {
                 Logger.getLogger(BrickPiTests.class.getName()).log(Level.SEVERE, null, ex);
             }
             // here're the values
-            System.out.println("Sensors: " + brickPi.getSensor(SensorPort.S1).getValue() + " " + brickPi.getSensor(SensorPort.S2).getValue() + " " + brickPi.getSensor(SensorPort.S3).getValue() + " " + brickPi.getSensor(SensorPort.S4).getValue());
+            System.out.println("Sensors: " + brickPi.getSensor(SensorPort.S1).getValue()) ;
         }
 
-        brickPi.setSensor(new Sensor(SensorType.UltrasonicSS), SensorPort.S2);
-        try {
-            // configure the sensors
-            brickPi.setupSensors();
-        } catch (IOException ex) {
-            Logger.getLogger(BrickPiTests.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//        brickPi.setSensor(new Sensor(SensorType.UltrasonicSS), SensorPort.S2);
+//        try {
+//            // configure the sensors
+//            brickPi.setupSensors();
+//        } catch (IOException ex) {
+//            Logger.getLogger(BrickPiTests.class.getName()).log(Level.SEVERE, null, ex);
+//        }
 
         //System.exit(0);
        // Motor motor = new Motor();
