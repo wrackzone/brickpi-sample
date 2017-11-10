@@ -53,7 +53,7 @@ public class BrickPiTests {
         System.out.println("opening sensors...");
         // add touch sensors to all the ports.        
 //        brickPi.setSensor(new Sensor(SensorType.Ultrasonic), SensorPort.S1);
-        brickPi.setSensor(new EV3TouchSensor(), SensorPort.S1);
+        brickPi.setSensor(new EV3TouchSensor(), SensorPort.S2);
 //        brickPi.setSensor(new Sensor(SensorType.Raw), SensorPort.S3);
 //        brickPi.setSensor(new Sensor(SensorType.Raw), SensorPort.S4);
         
@@ -74,7 +74,7 @@ public class BrickPiTests {
                 Logger.getLogger(BrickPiTests.class.getName()).log(Level.SEVERE, null, ex);
             }
             // here're the values
-            System.out.println("Sensors: " + brickPi.getSensor(SensorPort.S1).getValue()) ;
+            System.out.println("Sensors: " + brickPi.getSensor(SensorPort.S2).getValue()) ;
         }
 
 //        brickPi.setSensor(new Sensor(SensorType.UltrasonicSS), SensorPort.S2);
