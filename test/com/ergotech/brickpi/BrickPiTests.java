@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 
 import com.ergotech.brickpi.motion.Motor;
 import com.ergotech.brickpi.motion.MotorPort;
+import com.ergotech.brickpi.sensors.EV3TouchSensor;
 import com.ergotech.brickpi.sensors.Sensor;
 import com.ergotech.brickpi.sensors.SensorPort;
 import com.ergotech.brickpi.sensors.SensorType;
@@ -52,7 +53,7 @@ public class BrickPiTests {
         System.out.println("opening sensors...");
         // add touch sensors to all the ports.        
 //        brickPi.setSensor(new Sensor(SensorType.Ultrasonic), SensorPort.S1);
-        brickPi.setSensor(new TouchSensor(), SensorPort.S1);
+        brickPi.setSensor(new EV3TouchSensor(), SensorPort.S1);
 //        brickPi.setSensor(new Sensor(SensorType.Raw), SensorPort.S3);
 //        brickPi.setSensor(new Sensor(SensorType.Raw), SensorPort.S4);
         
