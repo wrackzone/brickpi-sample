@@ -1,0 +1,1 @@
+java -classpath ./bin:./lib/brickpi-1.0-SNAPSHOT.jar:./libs/* com.ergotech.brickpi.BrickPiTests
