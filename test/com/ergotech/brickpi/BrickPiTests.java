@@ -25,6 +25,8 @@ import com.ergotech.brickpi.sensors.SensorPort;
 import com.ergotech.brickpi.sensors.SensorType;
 import com.ergotech.brickpi.sensors.TouchSensor;
 
+// java -classpath ./bin:./lib/brickpi-1.0-SNAPSHOT.jar:./libs/* com.ergotech.brickpi.BrickPiTests
+
 /**
  *
  * @author jim
@@ -47,6 +49,7 @@ public class BrickPiTests {
         } catch (InterruptedException ex) {
             Logger.getLogger(BrickPiTests.class.getName()).log(Level.SEVERE, null, ex);
         }
+        System.out.println("opening sensors...");
         // add touch sensors to all the ports.        
         brickPi.setSensor(new Sensor(SensorType.Ultrasonic), SensorPort.S1);
         brickPi.setSensor(new TouchSensor(), SensorPort.S2);
@@ -54,6 +57,7 @@ public class BrickPiTests {
         brickPi.setSensor(new Sensor(SensorType.Raw), SensorPort.S4);
         
         try {
+        		System.out.println("setting up sensors...");
             // configure the sensors
             brickPi.setupSensors();
         } catch (IOException ex) {
@@ -81,11 +85,11 @@ public class BrickPiTests {
         }
 
         //System.exit(0);
-        Motor motor = new Motor();
+       // Motor motor = new Motor();
 //        motor.setCommandedOutput(0);
 //        motor.setEnabled(true);
 //        motor.resetEncoder();
-        brickPi.setMotor(motor, MotorPort.MA);
+       // brickPi.setMotor(motor, MotorPort.MA);
 //        motor.setCommandedOutput(25);
 //        for (int counter = 0; counter < 50; counter++) {
 //            try {
@@ -112,7 +116,7 @@ public class BrickPiTests {
 //        } catch (InterruptedException ex) {
 //            Logger.getLogger(BrickPiTests.class.getName()).log(Level.SEVERE, null, ex);
 //        }
-        motor.rotate(1, 50);
+       // motor.rotate(1, 50);
         // there's a problem here since the code will exit before the rotation is complete...
         try {
             // get the updated values.
