@@ -53,7 +53,7 @@ public class BrickPiTests {
         System.out.println("opening sensors...");
         // add touch sensors to all the ports.        
 //        brickPi.setSensor(new Sensor(SensorType.Ultrasonic), SensorPort.S1);
-        brickPi.setSensor(new EV3TouchSensor(), SensorPort.S2);
+        brickPi.setSensor(new Sensor(SensorType.Raw), SensorPort.S2);
 //        brickPi.setSensor(new Sensor(SensorType.Raw), SensorPort.S3);
 //        brickPi.setSensor(new Sensor(SensorType.Raw), SensorPort.S4);
         
