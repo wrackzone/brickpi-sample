@@ -65,7 +65,7 @@ public class BrickPiTests {
             Logger.getLogger(BrickPiTests.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        for (int counter = 0; counter < 5; counter++) {
+        for (int counter = 0; counter < 50; counter++) {
             System.out.println("Update Values");
             try {
                 // get the updated values.
